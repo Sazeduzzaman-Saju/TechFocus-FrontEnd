@@ -22,6 +22,8 @@ $(document).ready(function () {
   // document ready
 });
 
+// Banner Slider Start
+
 var swiper = new Swiper(".bannerSwiper", {
   pagination: {
     el: ".swiper-pagination",
@@ -35,4 +37,53 @@ var swiper = new Swiper(".bannerSwiper", {
   autoplay: {
     delay: 5000,
   },
+});
+
+// Client Logo Slider
+var swiper = new Swiper(".clientLogoSwiper", {
+  slidesPerView: 7,
+  spaceBetween: 30,
+  loop: true,
+  mousewheel: true,
+  autoplay: {
+    delay: 3000,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 7,
+      spaceBetween: 50,
+    },
+  },
+});
+
+// Go To Top Button
+var btn = $("#buttonss");
+
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass("show");
+  } else {
+    btn.removeClass("show");
+  }
+});
+
+btn.on("click", function (e) {
+  e.preventDefault();
+  $("html, body").animate({ scrollTop: 0 }, "300");
 });

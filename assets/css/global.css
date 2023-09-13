@@ -250,8 +250,6 @@
 
 .swiper-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 .swiper-pagination-bullet-active {
@@ -282,11 +280,254 @@
   bottom: -10px;
 }
 
+/* Card Design */
+.newsCard {
+  position: relative;
+  width: 100%;
+  /* height: 100px; */
+  background-color: #fff;
+  color: black;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+figure img {
+  display: block;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+.overlay {
+  background: rgb(40, 26, 54);
+  background: -moz-linear-gradient(
+    0deg,
+    var(--sub-main-color) 20%,
+    rgba(89, 59, 116, 0) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    var(--sub-color) 20%,
+    rgba(89, 59, 116, 0) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    var(--sub-color) 20%,
+    rgba(89, 59, 116, 0) 100%
+  );
+  display: block;
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  bottom: 0;
+  z-index: 3;
+}
+
+.newsCaption {
+  position: absolute;
+  top: auto;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 15px;
+  -webkit-transform: translateY(80%);
+  transform: translateY(80%);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+.newsCaption i {
+  font-size: 24px;
+}
+.tags-text {
+  font-size: 12px !important;
+}
+
+.newsCaption-title {
+  margin-top: 0px;
+}
+.newsCaption-content {
+  margin: 0;
+}
+.newsCaption-link {
+  color: #fff;
+  text-decoration: underline;
+  opacity: 0.8;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
+  transition-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
+}
+.news-Slide-up:hover .overlay {
+  background: var(--main-color);
+  background: -moz-linear-gradient(
+    0deg,
+    var(--main-color) 40%,
+    rgba(89, 59, 116, 0) 100%
+  );
+  color: #000;
+  background: -webkit-linear-gradient(
+    0deg,
+    var(--main-color) 50%,
+    rgba(89, 59, 116, 0) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    var(--main-color) 60%,
+    rgba(89, 59, 116, 0) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#400a6f",endColorstr="#593b74",GradientType=1);
+}
+
+.news-Slide-up:hover .newsCaption {
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+.projects-card:hover {
+  transform: scale(1.1);
+}
+.projects-card {
+  transition: transform 0.5s;
+  border: 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.project-para {
+  line-height: 25px;
+  word-spacing: 0px;
+}
+.special-exhibit {
+  background: linear-gradient(
+    90deg,
+    rgb(216, 55, 48) 0%,
+    rgb(244, 141, 53) 100%
+  );
+}
+.develop-business {
+  display: flex;
+  align-items: center;
+
+  box-shadow: rgb(244, 141, 53) 0px 0px 4px -1px;
+}
+
+.social-icons-btn {
+  display: flex;
+}
+.border-left-side {
+  border-right: 1px solid var(--sub-color);
+}
+.icons {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  background: #111;
+  margin: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.twitter:hover {
+  background: #00ecee;
+}
+.facebook:hover {
+  background: #4267b2;
+}
+.instagram:hover {
+  background-image: linear-gradient(#8a3ab9, #e95950, #bc2a8d, #fccc63);
+}
+.linkedin:hover {
+  background: #0a66c2;
+}
+
+#buttonss {
+  display: inline-block;
+  background-color: #ff9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#buttonss::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#buttonss:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#buttonss:active {
+  background-color: #555;
+}
+#buttonss.show {
+  opacity: 1;
+  visibility: visible;
+}
+.buying-area{
+  display: flex;
+  align-items: center;
+}
 
 @media screen and (max-width: 600px) {
   .top-bar {
     display: none !important;
   }
+  .newsCaption {
+    position: relative;
+  }
+  .social-area {
+    display: flex !important;
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-logo{
+    display: none;
+  }
+  .projects-card{
+    margin-top: 15px;
+  }
+  .develop-business {
+    box-shadow: rgb(244, 141, 53) 0px 0px 4px -1px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.buying-area{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+.buying-area div{
+ margin-left: 0px !important;
+
+}
 }
 @media screen and (min-width: 992px) {
   /* remove the padding from the navbar so the dropdown hover state is not broken */
