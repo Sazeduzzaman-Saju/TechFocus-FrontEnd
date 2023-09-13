@@ -441,19 +441,23 @@ figure img {
   transition: all 0.15s ease;
 }
 .twitter:hover {
-  background: #00ecee;
+  background: var(--main-color);
+  color: white;
 }
 .facebook:hover {
-  background: #4267b2;
+  background: var(--main-color);
+  color: white;
 }
 .instagram:hover {
-  background-image: linear-gradient(#8a3ab9, #e95950, #bc2a8d, #fccc63);
+  background: var(--main-color);
+  color: white;
 }
 .linkedin:hover {
-  background: #0a66c2;
+  background: var(--main-color);
+  color: white;
 }
 
-#buttonss {
+#goTop {
   display: inline-block;
   background-color: #ff9800;
   width: 50px;
@@ -468,7 +472,7 @@ figure img {
   visibility: hidden;
   z-index: 1000;
 }
-#buttonss::after {
+#goTop::after {
   content: "\f077";
   font-family: FontAwesome;
   font-weight: normal;
@@ -477,14 +481,14 @@ figure img {
   line-height: 50px;
   color: #fff;
 }
-#buttonss:hover {
+#goTop:hover {
   cursor: pointer;
   background-color: #333;
 }
-#buttonss:active {
+#goTop:active {
   background-color: #555;
 }
-#buttonss.show {
+#goTop.show {
   opacity: 1;
   visibility: visible;
 }
@@ -493,6 +497,45 @@ figure img {
   align-items: center;
 }
 
+.breadcrumbs {
+  padding-top: 28px;
+  padding-bottom: 28px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.breadcrumbs .active{
+  color: var(--main-color);
+}
+.titles{
+  font-family: hurme-full-bold;
+  font-size: 32px;
+}
+.exhibition-area{
+  background-image: url('https://img.virtual-expo.com/media/ps/images/di/vision.bkg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.exhibition-content{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.exhibition-card{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+   align-items: center;
+}
+.btn-mcl-inverted:hover {
+  background-color: #f48d35!important;
+  color: #fff!important;
+}
+.btn-mcl-inverted {
+  border: 2px solid #f48d35!important;
+  background-color: #fff!important;
+}
 @media screen and (max-width: 600px) {
   .top-bar {
     display: none !important;

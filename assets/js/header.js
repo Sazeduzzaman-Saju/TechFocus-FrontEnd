@@ -73,7 +73,7 @@ var swiper = new Swiper(".clientLogoSwiper", {
 });
 
 // Go To Top Button
-var btn = $("#buttonss");
+var btn = $("#goTop");
 
 $(window).scroll(function () {
   if ($(window).scrollTop() > 300) {
