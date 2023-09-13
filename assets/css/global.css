@@ -1,8 +1,3 @@
-/* adds some margin below the link sets  */
-.navbar .dropdown-menu div[class*="col"] {
-  margin-bottom: 1rem;
-}
-
 .main-menu {
   background-color: var(--sub-color);
 }
@@ -113,6 +108,7 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+  z-index: 9999;
 }
 
 .top-bar {
@@ -165,14 +161,13 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.top-dropdown{
+.top-dropdown {
   color: var(--text-color);
 }
-.top-dropdown:active{
+.top-dropdown:active {
   color: #fff;
   background-color: var(--main-color);
 }
-
 
 .popover__title {
   font-size: 14px;
@@ -191,7 +186,7 @@
   visibility: hidden;
   position: absolute;
   left: -60px;
-    right: -60px;
+  right: -60px;
   transform: translate(0, 10px);
   background-color: #fff;
   padding: 1.5rem;
@@ -220,13 +215,71 @@
 .popover__message {
   text-align: center;
 }
-.signin{
+.signin {
   background-color: var(--main-color);
   color: white;
   width: 100%;
 }
-.signin:hover{
+.signin:hover {
   background-color: var(--sub-color);
+}
+
+.menu-single-items a:hover {
+  margin-left: 5px;
+  transition: all 0.5s;
+}
+
+.menu-dropdown {
+  border: 0 !important;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--main-color);
+}
+.devider-wrap {
+  margin: 30px 0px 20px;
+  padding: 0px 20px;
+  font-size: 14px;
+  color: rgb(85, 86, 89);
+  font-family: HurmeGeometricSans_SemiBold, sans-serif;
+  text-transform: uppercase;
+}
+.devider-content {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  padding: 0px 20px;
+  font-family: HurmeGeometricSans_No4_5_SemiBold, Arial, sans-serif;
+  font-size: 1.16em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgb(211, 211, 211);
+  position: relative;
+}
+.devider-text {
+  padding: 0px 20px;
+  background-color: rgb(246, 246, 246);
+  position: absolute;
+  bottom: -10px;
 }
 
 

@@ -42,19 +42,18 @@
   --text-color: #b1afaf;
 }
 
-.main-color{
+.main-color {
   color: var(--main-color);
 }
 /* Scroll Bar Css */
 body::-webkit-scrollbar {
   width: 10px;
 }
- 
+
 body::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  
 }
- 
+
 body::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
   border-top-right-radius: 0px;
@@ -81,6 +80,8 @@ html {
 }
 
 body {
+  background-color: #f6f6f6;
+  color: rgba(0, 0, 0, 0.87);
   min-height: 100vh;
   font-family: hurme-light;
   line-height: 1;
@@ -130,7 +131,7 @@ a {
   text-decoration: inherit;
   -webkit-tap-highlight-color: transparent;
 }
-a:hover{
+a:hover {
   color: var(--main-color);
   transition: all 0.5s;
 }

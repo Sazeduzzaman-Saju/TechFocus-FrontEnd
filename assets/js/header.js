@@ -22,4 +22,17 @@ $(document).ready(function () {
   // document ready
 });
 
-
+var swiper = new Swiper(".bannerSwiper", {
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  speed: 1000,
+  loop: true,
+  centeredSlides: true,
+  roundLengths: true,
+  mousewheel: true,
+  grabCursor: true,
+  autoplay: {
+    delay: 5000,
+  },
+});
