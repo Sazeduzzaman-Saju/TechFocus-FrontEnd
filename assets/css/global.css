@@ -492,7 +492,7 @@ figure img {
   opacity: 1;
   visibility: visible;
 }
-.buying-area{
+.buying-area {
   display: flex;
   align-items: center;
 }
@@ -505,37 +505,362 @@ figure img {
   padding-left: 25px;
   padding-right: 25px;
 }
-.breadcrumbs .active{
+.breadcrumbs .active {
   color: var(--main-color);
 }
-.titles{
+.titles {
   font-family: hurme-full-bold;
   font-size: 32px;
 }
-.exhibition-area{
-  background-image: url('https://img.virtual-expo.com/media/ps/images/di/vision.bkg.jpg');
+.exhibition-area {
+  background-image: url("https://img.virtual-expo.com/media/ps/images/di/vision.bkg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.exhibition-content{
+.exhibition-content {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
-.exhibition-card{
+.exhibition-card {
   margin-top: 5rem;
   margin-bottom: 5rem;
   display: flex;
   justify-content: center;
-   align-items: center;
+  align-items: center;
 }
 .btn-mcl-inverted:hover {
-  background-color: #f48d35!important;
-  color: #fff!important;
+  background-color: #f48d35 !important;
+  color: #fff !important;
 }
 .btn-mcl-inverted {
-  border: 2px solid #f48d35!important;
-  background-color: #fff!important;
+  border: 2px solid #f48d35 !important;
+  background-color: #fff !important;
 }
+
+.section-titles {
+  font-family: hurme-light;
+  font-weight: 800;
+}
+.univers-group-item {
+  /* margin-bottom: 5px; */
+  padding: 12px 15px;
+  /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); */
+}
+.univers-group-item span {
+  padding-left: 0px;
+  text-transform: uppercase;
+  color: #4d4d4d;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+}
+.nav-tabs {
+  border-bottom: 0px;
+  margin-top: 5px;
+}
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+  isolation: isolate;
+  border-color: transparent;
+  width: 100%;
+}
+
+.nav-tabs .nav-link {
+  margin-bottom: -3px;
+  width: 100%;
+  border-left: 3px solid var(--main-color);
+  background: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  background-color: var(--main-color);
+  width: 100%;
+  color: white;
+  border-left: 3px solid #000;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+.catalog-logo-area {
+  display: flex;
+  justify-content: center;
+}
+.catalog-logo {
+  text-align: center;
+  max-height: 20px;
+}
+.card-img-top {
+  max-height: 300px;
+}
+.pagination {
+  display: inline-block;
+  margin-bottom: 30px;
+  padding: 8px 0;
+  border-top: var(--main-color) solid 1px;
+  border-bottom: var(--main-color) solid 1px;
+}
+.card-news-trends {
+  border-radius: 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  height: 310px;
+  text-align: center;
+  background-color: #fff;
+  cursor: pointer;
+}
+.card-news-trends .profile {
+  transition: 0.2s;
+  height: 250px;
+}
+.card-news-trends:hover .profile {
+  transform: scale(1.4);
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.card-news-trends .content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.card-news-trends .content .back {
+  position: absolute;
+  width: 100%;
+  height: 335px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  transition: 1s;
+  z-index: 1;
+  padding: 22px;
+}
+
+.from-left {
+  top: 0;
+  left: -100%;
+}
+.card-news-trends:hover .content .from-left {
+  left: 0%;
+}
+
+.from-bottom {
+  top: 100%;
+  left: 0;
+}
+.card-news-trends:hover .content .from-bottom {
+  top: 0%;
+}
+
+.from-right {
+  top: 0%;
+  right: -100%;
+}
+.card-news-trends:hover .content .from-right {
+  right: 0;
+}
+
+.card-news-trends .content .back h3 {
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.card-news-trends .content .back .des {
+  font-size: 13px;
+  padding: 20px 0px;
+}
+.card-news-trends .content .back .social-icon {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.card-news-trends .content .back .social-icon li {
+  display: inline-block;
+}
+
+.card-news-trends .content .back .social-icon li a {
+  display: block;
+  background: #333;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+.news-link:hover {
+  text-decoration: underline;
+}
+.subtitles {
+  padding-top: 15px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.25);
+}
+
+#wrapper {
+  margin: 0 auto;
+  display: block;
+  width: 960px;
+}
+
+#pagination {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#pagination li {
+  display: inline;
+}
+#pagination li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 10px;
+  color: #000;
+}
+
+/* Active and Hoverable Pagination */
+#pagination li a {
+  border-radius: 5px;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+#pagination li a.active {
+  background-color: #4caf50;
+  color: #fff;
+}
+#pagination li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.map-container {
+  padding: 3.2rem 0.8rem;
+  position: relative;
+  display: inline-block;
+}
+
+.map-container img {
+  width: 100%;
+}
+
+.map-container .point {
+  cursor: pointer;
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  will-change: transform, box-shadow;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 var(--main-color);
+  animation: pulse 3s infinite;
+}
+
+.map-container .point:hover {
+  animation: none;
+  transform: translate(-50%, -50%) scale3D(1.35, 1.35, 1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.map-container .venezuela {
+  top: 54%;
+  left: 24%;
+}
+.map-container .brasil {
+  top: 64%;
+  left: 28%;
+}
+.map-container .argentina {
+  top: 77%;
+  left: 27%;
+}
+.map-container .colombia {
+  top: 55%;
+  left: 21%;
+}
+.map-container .panama {
+  top: 51%;
+  left: 18%;
+}
+.map-container .mexico {
+  top: 38%;
+  left: 12%;
+}
+.map-container .usa {
+  top: 26%;
+  left: 17%;
+}
+.map-container .arabia {
+  top: 40%;
+  left: 53%;
+}
+.map-container .turquia {
+  top: 31%;
+  left: 57%;
+}
+.map-container .rusia {
+  top: 16%;
+  left: 67%;
+}
+.map-container .china {
+  top: 40%;
+  left: 72%;
+}
+.map-container .japon {
+  top: 34%;
+  left: 86%;
+}
+.map-container .australia {
+  top: 72%;
+  left: 86%;
+}
+.step-form-btn{
+
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: var(--main-color);
+}
+
+.step-form-btn{
+  color: white !important;
+}
+.border-container{
+  border: 1px solid var(--main-color);
+}
+.title-select {
+  font-size: 12px;
+  background: white;
+  width: 30%;
+  text-align: center;
+  padding: 5px;
+  top: 12px;
+  left: 25px;
+  z-index: 9999;
+  
+  position: relative;
+  color: gray;
+}
+
+
+
+
+
+
+
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--main-color);
+  }
+  70% {
+    box-shadow: 0 0 0 25px rgba(0, 172, 193, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 172, 193, 0);
+  }
+}
+
 @media screen and (max-width: 600px) {
   .top-bar {
     display: none !important;
@@ -548,10 +873,10 @@ figure img {
     flex-direction: column;
     text-align: center;
   }
-  .footer-logo{
+  .footer-logo {
     display: none;
   }
-  .projects-card{
+  .projects-card {
     margin-top: 15px;
   }
   .develop-business {
@@ -560,17 +885,15 @@ figure img {
     flex-direction: column;
     text-align: center;
     justify-content: center;
-}
-.buying-area{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  
-}
-.buying-area div{
- margin-left: 0px !important;
-
-}
+  }
+  .buying-area {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .buying-area div {
+    margin-left: 0px !important;
+  }
 }
 @media screen and (min-width: 992px) {
   /* remove the padding from the navbar so the dropdown hover state is not broken */

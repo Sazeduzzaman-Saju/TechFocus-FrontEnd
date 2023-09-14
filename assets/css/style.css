@@ -145,6 +145,24 @@ h6 {
   font-size: inherit;
   font-weight: inherit;
 }
+.font-small{
+  font-size: 8px;      
+}
+.font-one{
+  font-size: 10px;      
+}
+.font-two{
+  font-size: 12px;      
+}
+.font-three{
+  font-size: 14px;      
+}
+.font-four{
+  font-size: 16px;      
+}
+.text-justify{
+  text-align: justify;
+}
 
 ol,
 ul {
