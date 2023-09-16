@@ -219,9 +219,11 @@
   background-color: var(--main-color);
   color: white;
   width: 100%;
+  transition: all 0.5s;
 }
 .signin:hover {
   background-color: var(--sub-color);
+  color: white;
 }
 
 .menu-single-items a:hover {
@@ -594,6 +596,28 @@ figure img {
 .card-img-top {
   max-height: 300px;
 }
+.card-img-top-related {
+  max-height: auto;
+}
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.swiper-button-next {
+  background: white;
+  color: var(--main-color);
+  border-radius: 50%;
+  width: 33px;
+  height: 33px;
+}
+.swiper-button-prev {
+  background: white;
+  color: var(--main-color);
+  border-radius: 50%;
+  width: 33px;
+  height: 33px;
+}
 .pagination {
   display: inline-block;
   margin-bottom: 30px;
@@ -813,19 +837,16 @@ figure img {
   top: 72%;
   left: 86%;
 }
-.step-form-btn{
-
-}
-
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
   color: #fff;
   background-color: var(--main-color);
 }
 
-.step-form-btn{
+.step-form-btn {
   color: white !important;
 }
-.border-container{
+.border-container {
   border: 1px solid var(--main-color);
 }
 .title-select {
@@ -837,17 +858,276 @@ figure img {
   top: 12px;
   left: 25px;
   z-index: 9999;
-  
   position: relative;
   color: gray;
 }
 
+/* Product Single Image Slider With Fancy Box */
 
+/* Styling for xzoom and placement */
+.xzoom-source img,
+.xzoom-preview img,
+.xzoom-lens img {
+  display: block;
+  max-width: none;
+  max-height: none;
+  height: 415px;
+}
 
+/* --------------- */
 
+/* xZoom Styles below */
 
+.xzoom-container {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.xzoom-thumbs {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
 
+.xzoom,
+.xzoom2,
+.xzoom3,
+.xzoom4,
+.xzoom5 {
+  margin-bottom: 15px;
+  height: 415px;
+  box-shadow: none !important;
+}
+
+/* Thumbs */
+
+.xzoom-gallery,
+.xzoom-gallery2,
+.xzoom-gallery3,
+.xzoom-gallery4,
+.xzoom-gallery5 {
+  border: 1px solid #cecece;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+.xzoom-gallery:hover {
+  -webkit-box-shadow: 0px 0px 3px 0px var(--main-color) !important;
+  -moz-box-shadow: 0px 0px 3px 0px var(--main-color) !important;
+  box-shadow: 0px 0px 3px 0px var(--main-color) !important;
+  border: 1px solid var(--main-color) !important;
+}
+
+.xzoom-source {
+  display: block;
+  position: static;
+  float: none;
+  clear: both;
+}
+
+.xzoom-hidden {
+  display: block;
+  position: static;
+  float: none;
+  clear: both;
+  overflow: hidden;
+}
+
+/* Everything out of border is hidden */
+
+/* Preview */
+
+.xzoom-preview {
+  border: 1px solid #888;
+  background: var(--main-color);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Lens */
+
+.xzoom-lens {
+  border: 1px solid #555;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  cursor: zoom-in;
+}
+
+/* Loading */
+
+.xzoom-loading {
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  opacity: 0.7;
+  background: url(../images/xloading.gif) center no-repeat;
+  width: 48px;
+  height: 48px;
+  transform: translate(-50%, -50%);
+}
+
+/* Additional class that applied to thumb when it is active */
+
+.xactive {
+  -webkit-box-shadow: 0px 0px 3px 0px var(--main-color) !important;
+  -moz-box-shadow: 0px 0px 3px 0px var(--main-color) !important;
+  box-shadow: 0px 0px 3px 0px var(--main-color) !important;
+  border: 1px solid var(--main-color) !important;
+}
+/* Caption */
+
+.xzoom-caption span {
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: block;
+  font-size: 0.75em;
+  font-weight: bold;
+  padding: 10px;
+}
+
+/* Fancy box End */
+.product-banner {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 3px;
+}
+.product-tabbing-menu-active {
+  border-bottom: 4px solid var(--sub-color);
+}
+
+/* Brand Page */
+.single-product-container {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px, rgba(0, 0, 0, 0.1) 0px -1px 5px;
+  margin-bottom: 50px;
+  padding: 30px 7.5% 30px calc(7.5% - 50px);
+}
+
+.single-product-description {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px, rgba(0, 0, 0, 0.1) 0px -1px 5px;
+}
+
+.single-bp-tag {
+  font-size: 12px;
+}
+
+.brand-single-image {
+  height: auto;
+  max-height: 500px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.description-title {
+  padding: 10px 20px;
+  font-family: HurmeGeometricSans_SemiBold, Arial, sans-serif;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  border-left: 3px solid var(--main-color);
+  margin-bottom: 0px;
+}
+
+.brand-description-area {
+  background-color: rgb(240, 240, 240);
+}
+
+.description-areas-brand {
+  height: 251px;
+  overflow: auto;
+}
+
+.specification-areas-brand {
+  height: 266px;
+  overflow: auto;
+}
+
+.video-areas-brand {
+  height: 250px;
+  overflow: auto;
+}
+
+.brand-product-details {
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  display: block;
+  transition: color 0.2s ease-in-out 0s;
+}
+
+.brand-logo-area {
+  background-color: white;
+  height: 75px;
+  padding: 20px;
+  max-height: 75px;
+  overflow: hidden;
+  width: 100%;
+  display: block;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px -3px 3px;
+}
+
+.brand-sub-image {
+  display: flex;
+  height: 30px;
+  overflow: hidden;
+  margin: 0px 20px 7px;
+}
+
+.brand-product-card {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px, rgba(0, 0, 0, 0.1) 0px -1px 5px;
+  height: 100%;
+}
+
+.brand-containers img {
+  max-width: 100%;
+  object-fit: scale-down;
+  max-height: 100%;
+}
+
+.brand-single-container {
+  position: absolute;
+  top: 5px;
+  left: -5px;
+  z-index: 1;
+}
+
+.brand-single-image {
+  background-repeat: no-repeat;
+  background-position: -150px 0px;
+  margin-bottom: 2px;
+}
+
+.brand-taging-area {
+  color: rgb(72, 72, 72);
+  font-size: 14px;
+}
+
+.extra-titles {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: hurme-full-bold;
+}
+.border-right{
+  border-right: 1px solid red;
+}
+
+.related-items li{
+  padding: 10px;
+  margin: 5px;
+  display: inline-block;
+}
+
+@media (max-width: 500px) {
+  img.xzoom {
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .xzoom-thumbs .xzoom-gallery {
+    width: 20%;
+    max-width: 50px;
+  }
+}
 
 @keyframes pulse {
   0% {

@@ -72,6 +72,40 @@ var swiper = new Swiper(".clientLogoSwiper", {
   },
 });
 
+// Client Logo Slider
+var swiper = new Swiper(".relatedProductSwiper", {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  dots: true,
+  loop: true,
+  mousewheel: false,
+  autoplay: {
+    delay: 3000,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+  },
+});
+
 // Go To Top Button
 var btn = $("#goTop");
 
