@@ -1107,14 +1107,301 @@ figure img {
   font-weight: bold;
   font-family: hurme-full-bold;
 }
-.border-right{
-  border-right: 1px solid red;
-}
 
-.related-items li{
+.related-items li {
   padding: 10px;
   margin: 5px;
   display: inline-block;
+}
+.bg-border {
+  position: relative;
+    bottom: -130px;
+  border: 2px solid var(--main-color);
+}
+.bottom-border{
+  width: 30%;
+  border-bottom: 2px solid #eee;
+}
+
+.breadcrumb-banner-area {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.how-card:hover{
+  color: white !important;
+  background-color: #00000066;
+  transition: all 0.5s;
+}
+
+/* Check Box Design For Mailing */
+
+
+  .checkbox-wrapper-18 .round {
+    position: relative;
+  }
+
+  .checkbox-wrapper-18 .round label {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 28px;
+    width: 28px;
+    display: block;
+  }
+
+  .checkbox-wrapper-18 .round label:after {
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 6px;
+    left: 8px;
+    opacity: 0;
+    position: absolute;
+    top: 9px;
+    transform: rotate(-45deg);
+    width: 12px;
+  }
+
+  .checkbox-wrapper-18 .round input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+  }
+
+  .checkbox-wrapper-18 .round input[type="checkbox"]:checked + label {
+    background-color: #66bb6a;
+    border-color: #66bb6a;
+  }
+
+  .checkbox-wrapper-18 .round input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+  }
+
+  .service-cards {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+.service-card{
+  padding: 20px;
+}
+.service-card:hover{
+  background-color: var(--main-color);
+  padding: 20px;
+  transition: all 0.5s;
+  color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.service-card:hover img{
+  transform: scale(0.5);
+  transition: all 0.5s ease-out;
+}
+
+/* Project Counter Design */
+.sectionClass {
+  padding: 20px 0px 50px 0px;
+  position: relative;
+  display: block;
+}
+
+.fullWidth {
+  width: 100% !important;
+  display: table;
+  float: none;
+  padding: 0;
+  min-height: 1px;
+  height: 100%;
+  position: relative;
+}
+
+
+.sectiontitle {
+  background-position: center;
+  margin: 30px 0 0px;
+  text-align: center;
+  min-height: 20px;
+}
+
+.sectiontitle h2 {
+  font-size: 30px;
+  color: #222;
+  margin-bottom: 0px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+
+.headerLine {
+  width: 160px;
+  height: 2px;
+  display: inline-block;
+  background: #101F2E;
+}
+
+
+.projectFactsWrap{
+    display: flex;
+  margin-top: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+#projectFacts .fullWidth{
+  padding: 0;
+}
+
+.projectFactsWrap .item{
+  width: 25%;
+  height: 100%;
+  padding: 50px 0px;
+  text-align: center;
+}
+
+.projectFactsWrap .item:nth-child(1){
+  background: var(--sub-color);
+}
+
+.projectFactsWrap .item:nth-child(2){
+  background: var(--sub-main-color);
+}
+
+.projectFactsWrap .item:nth-child(3){
+  background: var(--sub-color);
+}
+
+.projectFactsWrap .item:nth-child(4){
+  background: var(--sub-main-color);
+}
+
+.projectFactsWrap .item p.number{
+  font-size: 40px;
+  padding: 0;
+  font-weight: bold;
+}
+
+.projectFactsWrap .item p{
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  margin: 0;
+  padding: 10px;
+  font-family: 'Open Sans';
+}
+
+
+.projectFactsWrap .item span{
+  width: 60px;
+  background: rgba(255, 255, 255, 0.8);
+  height: 2px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.projectFactsWrap .item i{
+  vertical-align: middle;
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+.projectFactsWrap .item:hover i, .projectFactsWrap .item:hover p{
+  color: white;
+}
+
+.projectFactsWrap .item:hover span{
+  background: white;
+}
+
+.service-card-info{
+  min-height: 140px;
+  max-height: 150px;
+}
+
+.banner-overlay-image{
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.image-zoom:hover{
+  transform:  scale(1.5);
+  transition: all 0.5;
+}
+
+.sidesection{
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+
+/* MENU START HERE */
+
+.current{
+  font-weight: 500;
+  color: rgba(33,28,25,1)!important;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #000;
+}
+
+th {
+  text-align: left;
+  font-size: 12px;
+  text-align: center;
+  
+}
+
+thead th {
+  background-color: var(--main-color);
+  color: white;
+}
+
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+tbody td {
+  position: relative;
+}
+table tr:hover {
+  background: #fce8d6;
+  transition: all 0.5s;
+}
+table td:hover {
+  background: var(--main-color);
+  transition: all 0.5s;
+  color: white;
+}
+tbody td:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
 }
 
 @media (max-width: 500px) {
