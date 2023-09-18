@@ -1404,6 +1404,10 @@ tbody td:hover::before {
   z-index: -1;
 }
 
+.join-dist-card{
+  min-height: 415px;
+}
+
 @media (max-width: 500px) {
   img.xzoom {
     max-width: 80vw;
@@ -1429,6 +1433,9 @@ tbody td:hover::before {
 }
 
 @media screen and (max-width: 600px) {
+  .brand-logos{
+    flex-direction: column;
+  }
   .top-bar {
     display: none !important;
   }
