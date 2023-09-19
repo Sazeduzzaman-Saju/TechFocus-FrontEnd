@@ -315,3 +315,7 @@ $(document).ready(function () {
     $(this).addClass("current");
   });
 });
+
+
+// Initialize Draggable Table
+$('.dragable-table').dragableColumns();

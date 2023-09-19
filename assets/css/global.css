@@ -1407,7 +1407,26 @@ tbody td:hover::before {
 .join-dist-card{
   min-height: 415px;
 }
-
+.video-tag{
+  position: absolute;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 58px;
+    left: -8px;
+    padding: 4px;
+    top: 17px;
+    background-color: var(--main-color);
+    margin: 5px 0px 0px 0px;
+    color: white;
+}
+.list-style{
+  list-style-type: square;
+}
+.list-style:hover{
+  text-decoration: underline;
+}
+.dragable-table-bg{
+  background-color: var(--sub-color) !important;
+}
 @media (max-width: 500px) {
   img.xzoom {
     max-width: 80vw;

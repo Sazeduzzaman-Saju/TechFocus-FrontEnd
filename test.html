@@ -1,115 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkbox Selection</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.5.0/css/bootstrap.min.css">
+<title>Drag and Drop Table Columns</title>
+<style>
+table {
+    font-size: 11px;
+    border-collapse:collapse; 
+    border:1px solid
+}
+table td, table th {
+    border:1px solid;
+    padding: 3px 5px 3px 5px;
+}
+
+.tableHead{
+    background:#aaa; 
+    cursor:pointer
+}
+ 
+.draggedDiv {
+    position:absolute; 
+    background:#eee;
+}
+
+.dragging {
+    background:#eee; 
+    color:#000
+}
+
+.hovering {
+    background:#ccc; 
+    color:#555
+}
+.hovering:hover{
+  font-size: 13px;
+  font-weight: 400;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  background-color: var(--main-color);
+  color: white;
+}
+
+.new-content{
+  display: flex;
+  justify-content: center;
+}
+</style>    
+<script src='https://code.jquery.com/jquery-3.2.1.slim.js'
+        integrity='sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg=' crossorigin='anonymous'></script>
+<script>
+// JQuery
+$(function() {
+    var heads = $("#tableOne th");
+    
+    $.each(heads, function(inx, row ) {
+        var head = $(row);
+        head.bind( "selectstart", function() { return false });
+        head.bind( "mousedown", mousedown);
+        head.bind( "mouseover", mouseover);
+        head.bind( "mouseout", mouseout);
+        head.bind( "mouseup", mouseup);
+
+        head.addClass("tableHead");
+    });
+    $(document.documentElement).bind( "mouseup", documentMouseup);
+    $(document.documentElement).bind( "mousemove", documentMouseMove);
+});
+
+function documentMouseup(ev){
+    if (!dragTD) { return;}
+    
+    $(dragTD).removeClass("dragging");
+    dragTD = null;    
+    draggedDiv.remove();
+    draggedDiv = null;
+}
+
+function documentMouseMove(ev){
+    if (!draggedDiv) { return;}
+    
+    draggedDiv.css({top: ev.pageY + 5 + "px", left: ev.pageX + 10 + "px"});
+}
+
+var dragTD = null, draggedDiv=null;
+function mousedown(ev){
+    dragTD = this;
+    $(this).addClass("dragging");
+    
+    draggedDiv = $("<div>");
+    draggedDiv.addClass("draggedDiv");
+    draggedDiv.css({top: ev.pageY + 5 + "px", left:ev.pageX + 10 + "px"});
+    $(document.documentElement).append(draggedDiv);
+    
+    var dragTable = $("<table>");
+    draggedDiv.append(dragTable);
+
+    var srcInx = dragTD.cellIndex;
+    var rows = $("#tableOne tr"); 
+    
+    for (var x=0; x<rows.length; x++) {
+        var tr = rows[x].cloneNode(false);
+        dragTable.append(tr);
+        var tds = rows[x].cells[srcInx].cloneNode(true);
+        tr.appendChild(tds);
+    }    
+}
+
+function mouseover(ev){
+    if (dragTD === null) { return;}
+    $(this).addClass("hovering");
+}
+
+function mouseout(ev){
+    if (dragTD === null) { return;}
+    $(this).removeClass("hovering");
+}
+
+function mouseup(ev){
+    $(this).removeClass("hovering");
+    $(dragTD).removeClass("dragging");
+    draggedDiv.remove();
+    draggedDiv = null;
+    
+    var srcInx = dragTD.cellIndex;
+    var tarInx = this.cellIndex;
+    var rows = $("#tableOne tr"); 
+    
+    for (var x=0; x<rows.length; x++) {
+        tds = rows[x].cells;
+        rows[x].insertBefore(tds[srcInx], tds[tarInx])
+    }
+    
+    dragTD = null;
+}
+
+</script>
 </head>
 <body>
-    <div class="container mt-5">
-        <div class="checkbox-wrapper-18 d-flex align-items-center border p-2 justify-content-center" style="width: 15%;">
-            <label for="checkbox-18"> Select All</label>
-            <div class="round ms-2" id="selectAll">
-                <input type="checkbox" id="checkbox-18" />
-                <label for="checkbox-18"></label>
-            </div>
-        </div>
-        <form id="cardForm">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <img src="https://img.directindustry.com/images_di/universe/subscription-form/1.jpg" alt="">
-                        </div>
-                        <div class="card-body">
-                            <h6 class="card-title font-three text-center">DETECTION - MEASUREMENT 1</h6>
-                            <input
-                                type="checkbox"
-                                class="form-check-input"
-                                name=""
-                                value="Card 1"
-                            />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h6 class="card-title">DETECTION - MEASUREMENT 2</h6>
-                            <input
-                                type="checkbox"
-                                class="form-check-input"
-                                name=""
-                                value="Card 2"
-                            />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h6 class="card-title">DETECTION - MEASUREMENT 3</h6>
-                            <input
-                                type="checkbox"
-                                class="form-check-input"
-                                name=""
-                                value="Card 3"
-                            />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h6 class="card-title">DETECTION - MEASUREMENT 4</h6>
-                            <input
-                                type="checkbox"
-                                class="form-check-input"
-                                name=""
-                                value="Card 4"
-                            />
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more cards here -->
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </div>
-
-    <script>
-        $(document).ready(function () {
-            // Handle "Select All" checkbox
-            $("#selectAll").change(function () {
-                const isChecked = $(this).prop("checked");
-                $("input[name^='cardCheckbox']").prop("checked", isChecked);
-                // Toggle the .selected class for cards
-                $(".card").toggleClass("selected", isChecked);
-            });
-
-            // Handle card click to toggle checkbox and add/remove class
-            $(".card").click(function () {
-                const checkbox = $(this).find('input[type="checkbox"]');
-                checkbox.prop("checked", !checkbox.prop("checked"));
-                $(this).toggleClass("selected");
-            });
-
-            // Dynamically assign names to checkboxes
-            $("input[type='checkbox']").each(function (index) {
-                $(this).attr("name", "cardCheckbox" + (index + 1));
-            });
-
-            // Handle form submission
-            $("#cardForm").submit(function (e) {
-                e.preventDefault();
-                const selectedCards = [];
-                $("input[name^='cardCheckbox']:checked").each(function () {
-                    selectedCards.push($(this).val());
-                });
-                // Do something with the selectedCards array
-                console.log(selectedCards);
-                // You can submit the form or perform other actions here
-            });
-        });
-    </script>
+<table id="tableOne">
+    <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+            <th>Column 4</th>
+            <th>Column 5</th>
+            <th>Column 6</th>
+            <th>Column 7</th>
+            <th>Column 8</th>
+            <th>Column 9</th>
+            <th>Column 10</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>data 1</td>
+            <td>data 2</td>
+            <td>data 3</td>
+            <td>data 4</td>
+            <td>data 5</td>
+            <td>data 6</td>
+            <td>data 7</td>
+            <td>data 8</td>
+            <td>data 9</td>
+            <td>data 10</td>
+        </tr>
+        <tr>
+            <td>data 1</td>
+            <td>data 2</td>
+            <td>data 3</td>
+            <td>data 4</td>
+            <td>data 5</td>
+            <td>data 6</td>
+            <td>data 7</td>
+            <td>data 8</td>
+            <td>data 9</td>
+            <td>data 10</td>
+        </tr>
+    </tbody>
+</table>
+ 
+</body>
+</html>
