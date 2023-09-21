@@ -33,7 +33,7 @@
   </head>
   <body>
     <!-- HEADER-BEGIN -->
-    <header>
+    <header class="sticky-top">
       <!-- Top Bar Start -->
       <div class="container-fluid d-sm-none d-md-block" style="background-color: var(--sub-color)">
         <div class="row text-white top-bar" style="background-color: var(--sub-main-color)">
@@ -661,18 +661,18 @@
               <p class="text-center font-poppins">You can view your  conversation and request <br> history in your account.</p>
               <div class="row mb-5">
                 <div class="col-lg-6 offset-lg-3">
-                  <form action="/action_page.php" class="was-validated">
+                  <form action="/action_page.php" class="login-validation" novalidate>
                     <div class="mb-3 mt-3">
                       <label for="email" class="form-label fw-bold">Email</label>
                       <input type="email" class="form-control rounded-0" id="email" placeholder="Enter Email" name="email" required>
                       <div class="valid-feedback">Looks Good.</div>
-                      <!-- <div class="invalid-feedback">Please fill out this field.</div> -->
+                      <div class="invalid-feedback">Please fill out this field.</div>
                     </div>
                     <div class="mb-3">
                       <label for="pwd" class="form-label fw-bold">Password</label>
                       <input type="password" class="form-control rounded-0" id="pwd" placeholder="Enter password" name="pswd" required>
                       <div class="valid-feedback">Looks Good.</div>
-                      <!-- <div class="invalid-feedback">Please fill out this field.</div> -->
+                      <div class="invalid-feedback">Please fill out this field.</div>
                     </div>
                     <div class="d-flex justify-content-center">
                       <a href="#" class="my-3">Forgot Your Password?</a>
@@ -831,6 +831,31 @@
     <script src="https://kit.fontawesome.com/69b7156a94.js"></script>
     <script src="./assets/js/header.js"></script>
     <script src="./assets/js/scripts.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll(".login-validation");
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
     <!-- *********************************Script End***********************************-->
     <!-- *********************************Mr.Perfect***********************************-->
   </body>
