@@ -962,7 +962,7 @@
                 <div class="col-lg-8 offset-lg-2">
                   <form
                     action="/action_page.php"
-                    class="signup_validation"
+                    class="signup_validation needs-validation"
                     novalidate
                   >
                     <div class="row">
@@ -1053,7 +1053,7 @@
                             class="form-control rounded-0"
                             id="pwd"
                             placeholder="Enter password"
-                            name="pswd"
+                            name="pwd"
                             required
                           />
                           <div class="valid-feedback">Good.</div>
@@ -1291,29 +1291,31 @@
     <script src="./assets/js/header.js"></script>
     <script src="./assets/js/scripts.js"></script>
     <script>
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
-      (function () {
-        "use strict";
-
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.querySelectorAll(".signup_validation");
-
-        // Loop over them and prevent submission
-        Array.prototype.slice.call(forms).forEach(function (form) {
-          form.addEventListener(
-            "submit",
-            function (event) {
-              if (!form.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-
-              form.classList.add("was-validated");
-            },
-            false
-          );
+      $(document).ready(function () {
+        // Your existing validation logic
+        $(".needs-validation").on("submit", function (event) {
+          var form = $(this);
+          if (form[0].checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.addClass("was-validated");
         });
-      })();
+
+        // Additional password matching logic
+        $("#pwd, #confirm_password").on("keyup change", function () {
+          var password = $("#pwd").val();
+          var confirmPassword = $("#confirm_password").val();
+
+          if (password !== confirmPassword) {
+            $("#confirm_password")[0].setCustomValidity(
+              "Passwords do not match"
+            );
+          } else {
+            $("#confirm_password")[0].setCustomValidity("");
+          }
+        });
+      });
     </script>
     <!-- *********************************Script End***********************************-->
     <!-- *********************************Mr.Perfect***********************************-->
