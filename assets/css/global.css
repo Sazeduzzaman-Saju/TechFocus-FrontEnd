@@ -1115,10 +1115,10 @@ figure img {
 }
 .bg-border {
   position: relative;
-    bottom: -130px;
+  bottom: -130px;
   border: 2px solid var(--main-color);
 }
-.bottom-border{
+.bottom-border {
   width: 30%;
   border-bottom: 2px solid #eee;
 }
@@ -1129,7 +1129,7 @@ figure img {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.how-card:hover{
+.how-card:hover {
   color: white !important;
   background-color: #00000066;
   transition: all 0.5s;
@@ -1137,66 +1137,65 @@ figure img {
 
 /* Check Box Design For Mailing */
 
-
-  .checkbox-wrapper-18 .round {
-    position: relative;
-  }
-
-  .checkbox-wrapper-18 .round label {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-    height: 28px;
-    width: 28px;
-    display: block;
-  }
-
-  .checkbox-wrapper-18 .round label:after {
-    border: 2px solid #fff;
-    border-top: none;
-    border-right: none;
-    content: "";
-    height: 6px;
-    left: 8px;
-    opacity: 0;
-    position: absolute;
-    top: 9px;
-    transform: rotate(-45deg);
-    width: 12px;
-  }
-
-  .checkbox-wrapper-18 .round input[type="checkbox"] {
-    visibility: hidden;
-    display: none;
-    opacity: 0;
-  }
-
-  .checkbox-wrapper-18 .round input[type="checkbox"]:checked + label {
-    background-color: #66bb6a;
-    border-color: #66bb6a;
-  }
-
-  .checkbox-wrapper-18 .round input[type="checkbox"]:checked + label:after {
-    opacity: 1;
-  }
-
-  .service-cards {
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
+.checkbox-wrapper-18 .round {
+  position: relative;
 }
-.service-card{
+
+.checkbox-wrapper-18 .round label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  width: 28px;
+  display: block;
+}
+
+.checkbox-wrapper-18 .round label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 8px;
+  opacity: 0;
+  position: absolute;
+  top: 9px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.checkbox-wrapper-18 .round input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+  opacity: 0;
+}
+
+.checkbox-wrapper-18 .round input[type="checkbox"]:checked + label {
+  background-color: #66bb6a;
+  border-color: #66bb6a;
+}
+
+.checkbox-wrapper-18 .round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+.service-cards {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+.service-card {
   padding: 20px;
 }
-.service-card:hover{
+.service-card:hover {
   background-color: var(--main-color);
   padding: 20px;
   transition: all 0.5s;
   color: white;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.service-card:hover img{
+.service-card:hover img {
   transform: scale(0.5);
   transition: all 0.5s ease-out;
 }
@@ -1218,7 +1217,6 @@ figure img {
   position: relative;
 }
 
-
 .sectiontitle {
   background-position: center;
   margin: 30px 0 0px;
@@ -1234,66 +1232,62 @@ figure img {
   padding-left: 10px;
 }
 
-
 .headerLine {
   width: 160px;
   height: 2px;
   display: inline-block;
-  background: #101F2E;
+  background: #101f2e;
 }
 
-
-.projectFactsWrap{
-    display: flex;
+.projectFactsWrap {
+  display: flex;
   margin-top: 30px;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-
-#projectFacts .fullWidth{
+#projectFacts .fullWidth {
   padding: 0;
 }
 
-.projectFactsWrap .item{
+.projectFactsWrap .item {
   width: 25%;
   height: 100%;
   padding: 50px 0px;
   text-align: center;
 }
 
-.projectFactsWrap .item:nth-child(1){
+.projectFactsWrap .item:nth-child(1) {
   background: var(--sub-color);
 }
 
-.projectFactsWrap .item:nth-child(2){
+.projectFactsWrap .item:nth-child(2) {
   background: var(--sub-main-color);
 }
 
-.projectFactsWrap .item:nth-child(3){
+.projectFactsWrap .item:nth-child(3) {
   background: var(--sub-color);
 }
 
-.projectFactsWrap .item:nth-child(4){
+.projectFactsWrap .item:nth-child(4) {
   background: var(--sub-main-color);
 }
 
-.projectFactsWrap .item p.number{
+.projectFactsWrap .item p.number {
   font-size: 40px;
   padding: 0;
   font-weight: bold;
 }
 
-.projectFactsWrap .item p{
+.projectFactsWrap .item p {
   color: rgba(255, 255, 255, 0.8);
   font-size: 18px;
   margin: 0;
   padding: 10px;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
 }
 
-
-.projectFactsWrap .item span{
+.projectFactsWrap .item span {
   width: 60px;
   background: rgba(255, 255, 255, 0.8);
   height: 2px;
@@ -1301,53 +1295,51 @@ figure img {
   margin: 0 auto;
 }
 
-
-.projectFactsWrap .item i{
+.projectFactsWrap .item i {
   vertical-align: middle;
   font-size: 50px;
   color: rgba(255, 255, 255, 0.8);
 }
 
-
-.projectFactsWrap .item:hover i, .projectFactsWrap .item:hover p{
+.projectFactsWrap .item:hover i,
+.projectFactsWrap .item:hover p {
   color: white;
 }
 
-.projectFactsWrap .item:hover span{
+.projectFactsWrap .item:hover span {
   background: white;
 }
 
-.service-card-info{
+.service-card-info {
   min-height: 140px;
   max-height: 150px;
 }
 
-.banner-overlay-image{
+.banner-overlay-image {
   position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
-.image-zoom:hover{
-  transform:  scale(1.5);
+.image-zoom:hover {
+  transform: scale(1.5);
   transition: all 0.5;
 }
 
-.sidesection{
+.sidesection {
   width: 100%;
   display: grid;
   place-items: center;
 }
 
-
 /* MENU START HERE */
 
-.current{
+.current {
   font-weight: 500;
-  color: rgba(33,28,25,1)!important;
+  color: rgba(33, 28, 25, 1) !important;
 }
 
 table {
@@ -1369,7 +1361,6 @@ th {
   text-align: left;
   font-size: 12px;
   text-align: center;
-  
 }
 
 thead th {
@@ -1404,28 +1395,186 @@ tbody td:hover::before {
   z-index: -1;
 }
 
-.join-dist-card{
+.join-dist-card {
   min-height: 415px;
 }
-.video-tag{
+.video-tag {
   position: absolute;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    width: 58px;
-    left: -8px;
-    padding: 4px;
-    top: 17px;
-    background-color: var(--main-color);
-    margin: 5px 0px 0px 0px;
-    color: white;
+  width: 58px;
+  left: -8px;
+  padding: 4px;
+  top: 17px;
+  background-color: var(--main-color);
+  margin: 5px 0px 0px 0px;
+  color: white;
 }
-.list-style{
+.list-style {
   list-style-type: square;
 }
-.list-style:hover{
+.list-style:hover {
   text-decoration: underline;
 }
-.dragable-table-bg{
+.dragable-table-bg {
   background-color: var(--sub-color) !important;
+}
+
+.checkbox-wrapper-15 .cbx {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+.checkbox-wrapper-15 .cbx span {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+.checkbox-wrapper-15 .cbx span:first-child {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transform: scale(1);
+  vertical-align: middle;
+  border: 1px solid #b9b8c3;
+  transition: all 0.2s ease;
+}
+.checkbox-wrapper-15 .cbx span:first-child svg {
+  position: absolute;
+  z-index: 1;
+  top: 2px;
+  left: 2px;
+  fill: none;
+  stroke: white;
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 11px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+}
+.checkbox-wrapper-15 .cbx span:first-child:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--main-color);
+  display: block;
+  transform: scale(0);
+  opacity: 1;
+  border-radius: 50%;
+  transition-delay: 0.2s;
+}
+.checkbox-wrapper-15 .cbx span:last-child {
+  margin-left: 0px;
+}
+.checkbox-wrapper-15 .cbx span:last-child:after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: #b9b8c3;
+  transform-origin: 0 0;
+  transform: scaleX(0);
+}
+.checkbox-wrapper-15 .cbx:hover span:first-child {
+  border-color: var(--main-color);
+}
+
+.checkbox-wrapper-15 .inp-cbx:checked + .cbx span:first-child {
+  border-color: var(--main-color);
+  background: var(--main-color);
+  animation: check-15 0.6s ease;
+}
+.checkbox-wrapper-15 .inp-cbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+.checkbox-wrapper-15 .inp-cbx:checked + .cbx span:first-child:before {
+  transform: scale(2.2);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+.checkbox-wrapper-15 .inp-cbx:checked + .cbx span:last-child {
+  color: #b9b8c3;
+  transition: all 0.3s ease;
+}
+.checkbox-wrapper-15 .inp-cbx:checked + .cbx span:last-child:after {
+  transform: scaleX(1);
+  transition: all 0.3s ease;
+}
+
+@keyframes check-15 {
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.category-border-top {
+  border-top: 1px solid #f48d35;
+}
+
+.irs--flat .irs-bar {
+  top: 25px;
+  height: 12px;
+  background-color: #ff9800 !important;
+}
+.irs--flat .irs-from,
+.irs--flat .irs-to,
+.irs--flat .irs-single {
+  color: white;
+  font-size: 10px;
+  line-height: 1.333;
+  text-shadow: none;
+  padding: 1px 5px;
+  background-color: #ff9800 !important;
+  border-radius: 4px;
+}
+
+.irs--flat .irs-handle > i:first-child {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  margin-left: -1px;
+  background-color: var(--sub-main-color) !important;
+}
+.irs--flat .irs-from:before,
+.irs--flat .irs-to:before,
+.irs--flat .irs-single:before {
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: -6px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -3px;
+  overflow: hidden;
+  border: 3px solid transparent;
+  border-top-color: #ff9800 !important;
+}
+.rfq-offcanvas-modal {
+  transform: rotate(-90deg);
+  position: relative;
+  left: -185px;
+  top: 350px;
+  border-radius: 0px;
+}
+.social-icons-sponserd:hover{
+  transform: scale(1.5);
+  transition: all 0.5s;
+}
+.font-poppins{
+  font-family: 'Poppins', sans-serif;
+}
+.font-height{
+  line-height: 1.1;
 }
 @media (max-width: 500px) {
   img.xzoom {
@@ -1452,7 +1601,7 @@ tbody td:hover::before {
 }
 
 @media screen and (max-width: 600px) {
-  .brand-logos{
+  .brand-logos {
     flex-direction: column;
   }
   .top-bar {
