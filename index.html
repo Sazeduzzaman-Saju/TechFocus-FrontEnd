@@ -4,16 +4,183 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>All Pages Link Here</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Nunito", sans-serif;
+      }
+
+      :root {
+        --green: #58a497;
+        --yellow: #e09449;
+        --lightgreen1: #a4bdb7;
+        --brown: #8b4448;
+        --gray: gray;
+        --lightgreen2: rgb(164, 189, 183, 0.5);
+        --box: #ededed;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      /* Content-1:Start */
+      .box {
+        width: 350px;
+        height: fit-content;
+        border-radius: 20px;
+        padding: 10px;
+        text-align: center;
+        background: #ededed;
+      }
+
+      .box1 {
+        margin-top: 10px;
+      }
+
+      .content {
+        margin: 15px 2px;
+      }
+
+      .image img {
+        height: auto;
+        width: 120px;
+        border-radius: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5px;
+      }
+
+      .level {
+        font-size: 0.7em;
+        background-color: rgb(164, 189, 183, 0.5);
+        width: 50px;
+        padding: 3px;
+        border-radius: 5px;
+        font-weight: bolder;
+        letter-spacing: 1px;
+        display: block;
+        margin: 0px auto 10px;
+      }
+
+      .name {
+        font-size: 1.25em;
+        font-weight: bolder;
+        letter-spacing: 1px;
+      }
+
+      .job_title {
+        font-size: 0.65em;
+        font-weight: bolder;
+        color: gray;
+        margin-top: -2px;
+      }
+
+      .job_discription {
+        font-size: 0.7em;
+        color: gray;
+        margin: 10px 30px 20px;
+      }
+
+      .icons {
+        margin: 0px 30px;
+        font-size: 1.5em;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .icons button {
+        width: fit-content;
+        height: fit-content;
+        border: none;
+        font-size: 1em;
+      }
+
+      ion-icon:hover {
+        color: #58a497;
+        transition: 0.5s;
+      }
+
+      button {
+        width: 130px;
+        height: 40px;
+        border-radius: 10px;
+        font-weight: bolder;
+      }
+
+      .button {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        margin: 20px 30px 0px;
+      }
+
+      .button .message {
+        background: #ededed;
+        border: 2px solid #000;
+      }
+
+      .button .connect {
+        background-color: #000;
+        color: #ededed;
+        border: none;
+      }
+
+      button.connect:hover {
+        letter-spacing: 1px;
+        transition: 0.5s;
+      }
+
+      button.message:hover {
+        letter-spacing: 1px;
+        transition: 0.5s;
+        background: rgba(88, 164, 151, 0.5);
+      }
+
+      /* Content-1:End */
+      /* Responsiveness:Start */
+      @media screen and (max-width: 480px) {
+        .box {
+          width: 100vw;
+          border-radius: 0px;
+        }
+
+        .button {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .button button {
+          width: 250px;
+        }
+
+        button.connect {
+          margin-top: 10px;
+        }
+
+        .content2 {
+          padding: 0px 20px;
+        }
+
+        .content2 img {
+          width: 60px;
+          height: 60px;
+        }
+      }
+
+      /* Responsiveness:End */
+    </style>
   </head>
   <body>
     <section>
@@ -24,35 +191,34 @@
             <p class="text-center">All Page Link Are Here Please Click The Go Check Button</p>
             <hr class="w-25 mx-auto mb-5 text-success">
           </div>
-          <div class="col-lg-12 w-75 mx-auto mb-3 bg-white p-3">
-            <div class="d-flex justify-content-between align-items-center">
+          <div class="col-lg-12 w-75 mx-auto mb-3 bg-white p-3 shadow-lg">
+            <div class="d-flex justify-content-between align-items-center ">
               <div>
                 <p>Start Date</p>
                 <p>End Date</p>
                 <p>Page Status</p>
-                <p>Frontend Documentation</p>
-            </div>
+                <p class="">Frontend Documentation</p>
+              </div>
               <div>
-                <p>----------------------------------------------------------------------------------------></p>
-                <p>----------------------------------------------------------------------------------------></p>
-                <p>----------------------------------------------------------------------------------------></p>
-                <p>----------------------------------------------------------------------------------------></p>
-            </div>
-            <div>
+                <p class=""> ----------------------------------------------------------------------------- ></p>
+                <p class=""> ----------------------------------------------------------------------------- ></p>
+                <p class=""> ----------------------------------------------------------------------------- ></p>
+                <p class=""> ----------------------------------------------------------------------------- ></p>
+              </div>
+              <div>
                 <p class="main-color">16 Sep 2023</p>
                 <p class="main-color">28 Sep 2023</p>
                 <p>
-                  <div class="badge bg-success mt-1" title="Page Now Visible">Done</div>
-                  <div class="badge bg-danger mt-1 ms-1" title="Page Not Visible">Not Yet</div>
+                <div class="badge bg-success mt-1" title="Page Now Visible">Done</div>
+                <div class="badge bg-danger mt-1 ms-1" title="Page Not Visible">Not Yet</div>
                 </p>
-                <div class="d-flex">
-                  <div>
-                    <a href="https://docs.google.com/document/d/1DVwLeK3mSLeYXvkn0huGDkJv6f6V8CUHKdYFVMcBIgw/edit?usp=sharing"  target="_blank" title="Active Link" class="btn btn-primary btn-sm"
-                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                ></a>
-                  </div>
+                <div>
+                  <a href="https://docs.google.com/document/d/1DVwLeK3mSLeYXvkn0huGDkJv6f6V8CUHKdYFVMcBIgw/edit?usp=sharing" 
+                  target="_blank" title="Active Link" class="badge bg-info">
+                    Check The Doc.
+                  </a>
                 </div>
-            </div>
+              </div>
             </div>
           </div>
           <div class="col-lg-12">
@@ -60,347 +226,347 @@
               <table class="table table-hover table-bordered shadow-lg w-75 mx-auto">
                 <thead>
                   <tr class="text-white" style="background-color: var(--main-color);">
-                    <td scope="col" width="5%">Sl.</th>
-                    <td scope="col" width="75%">Page Name</th>
-                    <td scope="col" width="10%" class="text-center">Status</th>
-                    <td scope="col" width="10%" class="text-center">Link</th>
+                    <td scope="col" width="5%">Sl. </th>
+                    <td scope="col" width="75%">Page Name </th>
+                    <td scope="col" width="10%" class="text-center">Status </th>
+                    <td scope="col" width="10%" class="text-center">Link </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td scope="row">1</th>
+                    <td scope="row">1 </th>
                     <td>Home Page</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="index.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="index.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">2</th>
+                    <td scope="row">2 </th>
                     <td>Join Distributors</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="join-dist.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="join-dist.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">3</th>
+                    <td scope="row">3 </th>
                     <td>Manufacturer Account</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a disable target="_blank" class="btn btn-outline-danger btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a disable target="_blank" class="btn btn-outline-danger btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">4</th>
+                    <td scope="row">4 </th>
                     <td>News Trends</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="news-trends.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="news-trends.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">5</th>
+                    <td scope="row">5 </th>
                     <td>Our Service</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="our-service.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="our-service.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">6</th>
+                    <td scope="row">6 </th>
                     <td>Privacy</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a disable target="_blank" class="btn btn-outline-danger btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a disable target="_blank" class="btn btn-outline-danger btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">7</th>
+                    <td scope="row">7 </th>
                     <td>Product Details</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="product-single.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="product-single.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">8</th>
+                    <td scope="row">8 </th>
                     <td>RFQ</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="RFQ.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="RFQ.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">9</th>
+                    <td scope="row">9 </th>
                     <td>Sponsors</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="sponser.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="sponser.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">10</th>
+                    <td scope="row">10 </th>
                     <td>Sub Category</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="sub-category.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="sub-category.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">11</th>
+                    <td scope="row">11 </th>
                     <td>Subscriptions</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="subscriptions.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="subscriptions.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">12</th>
+                    <td scope="row">12 </th>
                     <td>Terms</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a disable target="_blank" class="btn btn-outline-danger btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a disable target="_blank" class="btn btn-outline-danger btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">12</th>
+                    <td scope="row">12 </th>
                     <td>Trends Details</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="trends-single.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="trends-single.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">13</th>
+                    <td scope="row">13 </th>
                     <td>About Us</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a disable target="_blank" class="btn btn-outline-danger btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a disable target="_blank" class="btn btn-outline-danger btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">14</th>
+                    <td scope="row">14 </th>
                     <td>Brand Catalog</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="brand-catalog.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="brand-catalog.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">15</th>
+                    <td scope="row">15 </th>
                     <td>Brand List</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="brand-list.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="brand-list.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">16</th>
+                    <td scope="row">16 </th>
                     <td>Brand News</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="brand-news.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="brand-news.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">17</th>
+                    <td scope="row">17 </th>
                     <td>Brand Products</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="brand-product.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="brand-product.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">18</th>
+                    <td scope="row">18 </th>
                     <td>Buying Guide</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="buying-guide.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="buying-guide.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">19</th>
+                    <td scope="row">19 </th>
                     <td>Catalogs PDF</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="catalogs-pdf.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="catalogs-pdf.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">20</th>
+                    <td scope="row">20 </th>
                     <td>Catalogs</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="catalogs.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="catalogs.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">21</th>
+                    <td scope="row">21 </th>
                     <td>Company</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="company.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="company.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">22</th>
+                    <td scope="row">22 </th>
                     <td>Compare</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="compare.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="compare.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">23</th>
+                    <td scope="row">23 </th>
                     <td>Distributors</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="distibutors.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="distibutors.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">24</th>
+                    <td scope="row">24 </th>
                     <td>Exhibit</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="exhibit.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="exhibit.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">25</th>
+                    <td scope="row">25 </th>
                     <td>Faq</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a disable target="_blank" class="btn btn-outline-danger btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a disable target="_blank" class="btn btn-outline-danger btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">26</th>
+                    <td scope="row">26 </th>
                     <td>Guide</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="guide.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="guide.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">27</th>
+                    <td scope="row">27 </th>
                     <td>How To Source</td>
                     <td class="text-center">
                       <div class="badge bg-success mt-1">Done</div>
                     </td>
                     <td class="text-center">
-                      <a href="guide.html" target="_blank" class="btn btn-primary btn-sm"
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></a>
+                      <a href="guide.html" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
                     </td>
                   </tr>
                 </tbody>
@@ -409,14 +575,52 @@
           </div>
         </div>
       </div>
+      <div class="container">
+        <section class="d-flex justify-content-center">
+          <div class="box1 box">
+            <div class="content">
+              <div class="image">
+                <img src="https://media.licdn.com/dms/image/D4D03AQGJoDmNiBPI-Q/profile-displayphoto-shrink_100_100/0/1670501546118?e=1700697600&v=beta&t=uOW6R6qcL1HaNRXqyCvdWX0NKrLEbYbtrpOOtq569Mk" alt="Profile Image">
+              </div>
+              <div class="text">
+                <p class="name">Sazeduzzaman Saju</p>
+                <p class="job_title">Frontend Developer</p>
+                <p class="job_discription">Front-End Developer Passionate About Creating User-Friendly Experiences</p>
+              </div>
+              <div class="icons">
+                <button>
+                  <a href="">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a>
+                </button>
+                <button>
+                  <a href=""></a>
+                  <ion-icon name="logo-facebook"></ion-icon>
+                  <a href=""></a>
+                </button>
+                <button>
+                  <a href=""></a>
+                  <ion-icon name="logo-behance"></ion-icon>
+                  <a href=""></a>
+                </button>
+              </div>
+              <div class="button">
+                <div>
+                  <button class="message" type="button">Message</button>
+                </div>
+                <div>
+                  <button class="connect" type="button">Connect</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </section>
-
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://kit.fontawesome.com/69b7156a94.js"></script>
   </body>
 </html>
