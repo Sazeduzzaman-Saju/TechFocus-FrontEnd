@@ -661,14 +661,14 @@
               <p class="text-center font-poppins">You can view your  conversation and request <br> history in your account.</p>
               <div class="row mb-5">
                 <div class="col-lg-8 offset-lg-2">
-                  <form action="/action_page.php" class="was-validated">
+                  <form action="/action_page.php" class="needs-validation" novalidate>
                     <div class="row">
                       <div class="col-lg-6 col-sm-12">
                         <div class="mb-3 mt-3">
                           <label for="first_name" class="form-label">First Name:</label>
                           <input type="text" class="form-control rounded-0" id="first_name" placeholder="Enter First Name" name="first_name" required>
                           <div class="valid-feedback">Excellent.</div>
-                          <!-- <div class="invalid-feedback">Please fill out this field.</div> -->
+                          <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
                       </div>
                       <div class="col-lg-6 col-sm-12">
@@ -676,19 +676,17 @@
                           <label for="last_name" class="form-label">Last Name:</label>
                           <input type="text" class="form-control rounded-0" id="last_name" placeholder="Enter Last Name" name="last_name" required>
                           <div class="valid-feedback">Excellent.</div>
-                          <!-- <div class="invalid-feedback">Please fill out this field.</div> -->
+                          <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
                       </div>
                     </div>
-
-
                     <div class="row">
                       <div class="col-lg-6 col-sm-12">
                         <div class="mb-3">
                           <label for="email" class="form-label">Email:</label>
                           <input type="email" class="form-control rounded-0" id="email" placeholder="Enter Email" name="email" required>
                           <div class="valid-feedback">Good.</div>
-                          <!-- <div class="invalid-feedback">Please fill out this field.</div> -->
+                          <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
                       </div>
                       <div class="col-lg-6 col-sm-12">
@@ -696,7 +694,7 @@
                           <label for="phone_number" class="form-label">Phone Number</label>
                           <input type="number" class="form-control rounded-0" id="phone_number" placeholder="Enter Phone NUmber" name="phone_number" required>
                           <div class="valid-feedback">Valid.</div>
-                          <!-- <div class="invalid-feedback">Please fill out this field.</div> -->
+                          <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
                       </div>
                     </div>
@@ -707,7 +705,7 @@
                           <label for="pwd" class="form-label">Password:</label>
                           <input type="password" class="form-control rounded-0" id="pwd" placeholder="Enter password" name="pswd" required>
                           <div class="valid-feedback">Good.</div>
-                          <!-- <div class="invalid-feedback">Please fill out this field.</div> -->
+                          <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
                       </div>
                       <div class="col-lg-6 col-sm-12">
@@ -881,6 +879,28 @@
     <script src="https://kit.fontawesome.com/69b7156a94.js"></script>
     <script src="./assets/js/header.js"></script>
     <script src="./assets/js/scripts.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+    </script>
     <!-- *********************************Script End***********************************-->
     <!-- *********************************Mr.Perfect***********************************-->
   </body>

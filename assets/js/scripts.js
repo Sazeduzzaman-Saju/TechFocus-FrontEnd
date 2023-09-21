@@ -320,3 +320,6 @@ $(document).ready(function () {
 // Initialize Draggable Table
 $('.dragable-table').dragableColumns();
 
+
+// Form Validation
+
