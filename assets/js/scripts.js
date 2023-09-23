@@ -321,5 +321,3 @@ $(document).ready(function () {
 $('.dragable-table').dragableColumns();
 
 
-// Form Validation
-
