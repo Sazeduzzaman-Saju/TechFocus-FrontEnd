@@ -1566,21 +1566,39 @@ tbody td:hover::before {
   top: 350px;
   border-radius: 0px;
 }
-.social-icons-sponserd:hover{
+.social-icons-sponserd:hover {
   transform: scale(1.5);
   transition: all 0.5s;
 }
-.font-poppins{
-  font-family: 'Poppins', sans-serif;
+.font-poppins {
+  font-family: "Poppins", sans-serif;
 }
-.font-height{
+.font-height {
   line-height: 1.1;
 }
 
- /* Add CSS to highlight the card when clicked */
- .highlight-card {
+.highlight-card {
   border: 4px solid var(--main-color); /* Primary color border */
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.faq-search {
+  top: 1px;
+  font-size: 15px;
+  position: relative;
+  right: 40px;
+  z-index: 999;
+}
+.faq-menu {
+  padding: 10px;
+}
+.faq-button-area {
+  color: var(--sub-main-color);
+}
+.faq-menu:hover {
+  background-color: var(--main-color);
+  color: white;
+  transition: all 0.5s;
 }
 @media (max-width: 500px) {
   img.xzoom {
