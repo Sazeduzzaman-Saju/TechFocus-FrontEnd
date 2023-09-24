@@ -1600,6 +1600,38 @@ tbody td:hover::before {
   color: white;
   transition: all 0.5s;
 }
+/* .hide {
+  visibility: hidden; 
+} */
+
+ul.category-grouplist {
+  margin: 0 0 50px;
+  padding: 0 0 0 85px;
+}
+
+ul.category-grouplist li {
+  font: 400 14px "Century Gothic",Verdana,sans-serif;
+  margin: 0 0 0 20px;
+  padding: 5px 2px;
+  position: relative;
+}
+ul.category-grouplist li .imgSubCat {
+  position: absolute;
+  width: 75px;
+  top: -8px;
+  left: -103px;
+  text-align: center;
+}
+
+/* Initially hide the .imgSubCat div */
+.imgSubCat {
+  display: none;
+}
+
+/* Show the .imgSubCat div when hovering over the parent li */
+li:hover .imgSubCat {
+  display: block;
+}
 @media (max-width: 500px) {
   img.xzoom {
     max-width: 80vw;
