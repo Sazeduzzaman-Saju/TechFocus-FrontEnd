@@ -1623,8 +1623,13 @@ ul.category-grouplist li .imgSubCat {
   text-align: center;
 }
 
-/* Initially hide the .imgSubCat div */
-.imgSubCat {
+/* Initially show the .imgSubCat div for the first li */
+li:first-child .imgSubCat {
+  display: block;
+}
+
+/* Initially hide other .imgSubCat divs */
+li:not(:first-child) .imgSubCat {
   display: none;
 }
 
@@ -1632,6 +1637,33 @@ ul.category-grouplist li .imgSubCat {
 li:hover .imgSubCat {
   display: block;
 }
+
+/* Hide .imgSubCat div when not hovering over any li */
+ul:hover .imgSubCat {
+  display: none;
+}
+
+/* Show the .imgSubCat div for the first li when not hovering over any li */
+ul:not(:hover) li:first-child .imgSubCat {
+  display: block;
+}
+.side_border {
+  border-right: 1px solid #dee2e6;
+  margin-top: -25px;
+  padding: 23px;
+  margin-bottom: 0px;
+  position: relative;
+  /* top: -25px; */
+  left: 70px;
+  bottom: 0px;
+}
+.industry_title{
+  width: 81%;
+}
+.main-bg{
+  background-color: #f48d35;
+}
+
 @media (max-width: 500px) {
   img.xzoom {
     max-width: 80vw;
